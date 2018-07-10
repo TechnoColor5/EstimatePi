@@ -1,3 +1,9 @@
+/* Run as : java Pi [numThreads] [Iterations]
+ * Calculates an estimate of Pi using the Monte Carlo method
+ * Used as an exercise to learn Multithreading and Atomic variables
+ * Written by Daniel Mailloux	
+ */
+
 import java.lang.*;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -15,7 +21,6 @@ public class Pi {
 		}
 
 		public void run() {
-			//System.out.println("iterations: "+ iterations);
 			try {
 				for (int i = 0; i < iterations; i++) {
 					ThreadLocalRandom  rand = ThreadLocalRandom.current(); 
